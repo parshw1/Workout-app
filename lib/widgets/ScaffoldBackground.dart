@@ -14,7 +14,7 @@ class Scaffoldbackground extends StatelessWidget {
                 end: Alignment.bottomLeft,
                 colors: [
                   Color.fromARGB(255, 89, 86, 86),
-                  Color.fromARGB(255, 24, 24, 24),
+                  Color.fromARGB(255, 0, 0, 0),
                 ],
               ),
             ),
