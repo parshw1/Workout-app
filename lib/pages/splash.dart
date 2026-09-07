@@ -8,6 +8,7 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.black,
       body: Stack(
@@ -29,27 +30,28 @@ class SplashScreen extends StatelessWidget {
           Center(
             child: Column(
               children: [
-                SizedBox(height: 150),
-                SvgPicture.asset('assets/icons/logo.svg'),
+                const Spacer(flex: 2,),
+                SvgPicture.asset('assets/icons/logo.svg', width: screenWidth*0.25),
                 SizedBox(height: 2),
                 Text(
                   'Helios Sports Tech',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 34,
+                    fontSize: screenWidth * 0.085,
                     color: Colors.white,
                   ),
                 ),
                 Text(
                   'Here To Compete.',
-                  style: TextStyle(fontSize: 21, color: Color(0xFFC0C0C0)),
+                  style: TextStyle(fontSize: screenWidth * 0.052, color: Color(0xFFC0C0C0)),
                 ),
-                SizedBox(height: 450),
+                const Spacer(flex: 5),
                 GradientButton(
                   text: 'Get started', 
                   onPressed: (){
                     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Loginpage()));
-                  })
+                  }),
+                const SizedBox(height: 20),
               ],
             ),
           ),
