@@ -113,7 +113,7 @@ class Accountpage extends StatelessWidget {
                 ),
                 SizedBox(height: 60),
                 GradientButton(
-                  text: 'Login',
+                  text: 'Create Account',
                   onPressed: () {
                     Navigator.pushReplacement(
                       context,
@@ -122,17 +122,6 @@ class Accountpage extends StatelessWidget {
                   },
                 ),
                 SizedBox(height: 15,),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SizedBox(height: 40,),
-                    Text("Don't have an Account?", style: TextStyle(color: Colors.white),),
-                    SizedBox(height: 10,),
-                    TextButton(onPressed: null, child: Text('Sign Up', style: TextStyle(color: const Color.fromARGB(255, 219, 113, 0)),))
-                  ],
-                ),
-                SizedBox(height: 140,),
-                Text('Alternatively Login with:', style: TextStyle(color: Colors.white),),
                 Container(
                   width: 343,
                   height: 50,
