@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:workout_app/widgets/ScaffoldBackground.dart';
 import 'package:workout_app/widgets/headingText.dart';
 import 'package:workout_app/widgets/YellowgradientButton.dart';
-import 'package:workout_app/pages/homepage.dart';
+import 'package:workout_app/pages/homepageNavigation.dart';
 
 class Accountpage extends StatelessWidget {
   const Accountpage({super.key});
@@ -27,7 +27,44 @@ class Accountpage extends StatelessWidget {
                 SizedBox(height: 100),
                 Headingtext(text: 'Create an Account', size: 25),
                 SizedBox(height: 10),
-                Text('Help us finish settng up your account.', style: TextStyle(color: Colors.white),),
+                Text(
+                  'Help us finish settng up your account.',
+                  style: TextStyle(color: Colors.white),
+                ),
+                SizedBox(height: 10,),
+                SizedBox(
+                  width: 343,
+                  height: 25,
+                  child: Row(
+                    children: [
+                      Text('Username', style: TextStyle(color: Colors.white)),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  width: 343,
+                  height: 63,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintText: 'E.g Johntheone',
+                      hintStyle: TextStyle(color: Color(0xFFC6C6C6)),
+                      prefixIcon: const Icon(
+                        Icons.email,
+                        color: Color(0xFFC6C6C6),
+                      ),
+                      
+                      filled: true,
+                      fillColor: const Color.fromARGB(255, 77, 77, 83),
+
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(5),
+                        borderSide: BorderSide.none,
+                      ),
+                    ),
+                    keyboardType: TextInputType.emailAddress,
+                  ),
+                ),
+                SizedBox(height: 10),
                 SizedBox(
                   width: 343,
                   height: 25,
@@ -48,10 +85,7 @@ class Accountpage extends StatelessWidget {
                         Icons.email,
                         color: Color(0xFFC6C6C6),
                       ),
-                      suffixIcon: const Icon(
-                        Icons.lock,
-                        color: Color(0xFFC6C6C6),
-                      ),
+                      
                       filled: true,
                       fillColor: const Color.fromARGB(255, 77, 77, 83),
 
@@ -60,10 +94,10 @@ class Accountpage extends StatelessWidget {
                         borderSide: BorderSide.none,
                       ),
                     ),
-                    keyboardType: TextInputType.emailAddress,
+                    keyboardType: TextInputType.visiblePassword,
                   ),
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 10),
                 SizedBox(
                   width: 343,
                   height: 25,
@@ -85,9 +119,42 @@ class Accountpage extends StatelessWidget {
                         color: Color(0xFFC6C6C6),
                       ),
                       suffixIcon: const Icon(
-                        Icons.lock,
+                        Icons.remove_red_eye,
                         color: Color(0xFFC6C6C6),
                       ),
+                      filled: true,
+                      fillColor: const Color.fromARGB(255, 77, 77, 83),
+
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(5),
+                        borderSide: BorderSide.none,
+                      ),
+                    ),
+                    keyboardType: TextInputType.visiblePassword,
+                  ),
+                ),
+                SizedBox(height: 10,),
+                SizedBox(
+                  width: 343,
+                  height: 25,
+                  child: Row(
+                    children: [
+                      Text('Confirm password', style: TextStyle(color: Colors.white)),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  width: 343,
+                  height: 63,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Confirm password',
+                      hintStyle: TextStyle(color: Color(0xFFC6C6C6)),
+                      prefixIcon: const Icon(
+                        Icons.email,
+                        color: Color(0xFFC6C6C6),
+                      ),
+                      
                       filled: true,
                       fillColor: const Color.fromARGB(255, 77, 77, 83),
 
@@ -106,14 +173,17 @@ class Accountpage extends StatelessWidget {
                     children: [
                       TextButton(
                         onPressed: null,
-                        child: Text('Forgot Password?', style: TextStyle(color: Colors.white),),
+                        child: Text(
+                          'Forgot Password?',
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
                     ],
                   ),
                 ),
                 SizedBox(height: 60),
                 GradientButton(
-                  text: 'Create Account',
+                  text: 'Continue',
                   onPressed: () {
                     Navigator.pushReplacement(
                       context,
@@ -121,11 +191,8 @@ class Accountpage extends StatelessWidget {
                     );
                   },
                 ),
-                SizedBox(height: 15,),
-                Container(
-                  width: 343,
-                  height: 50,
-                )
+                SizedBox(height: 15),
+                Container(width: 343, height: 50),
               ],
             ),
           ),

@@ -4,7 +4,7 @@ import 'package:workout_app/widgets/ScaffoldBackground.dart';
 import 'package:workout_app/widgets/headingText.dart';
 import 'package:workout_app/widgets/YellowgradientButton.dart';
 import 'package:workout_app/pages/createAccountPage.dart';
-import 'package:workout_app/pages/homepage.dart';
+import 'package:workout_app/pages/homepageNavigation.dart';
 
 class Loginpage extends StatelessWidget {
   const Loginpage({super.key});
@@ -51,10 +51,6 @@ class Loginpage extends StatelessWidget {
                             Icons.email,
                             color: Color(0xFFC6C6C6),
                           ),
-                          suffixIcon: const Icon(
-                            Icons.lock,
-                            color: Color(0xFFC6C6C6),
-                          ),
                           filled: true,
                           fillColor: const Color.fromARGB(255, 77, 77, 83),
                             
@@ -84,11 +80,11 @@ class Loginpage extends StatelessWidget {
                           hintText: 'Enter Password',
                           hintStyle: TextStyle(color: Color(0xFFC6C6C6)),
                           prefixIcon: const Icon(
-                            Icons.email,
+                            Icons.lock,
                             color: Color(0xFFC6C6C6),
                           ),
                           suffixIcon: const Icon(
-                            Icons.lock,
+                            Icons.remove_red_eye,
                             color: Color(0xFFC6C6C6),
                           ),
                           filled: true,

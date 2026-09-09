@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:workout_app/widgets/ScaffoldBackground.dart';
 import 'package:workout_app/widgets/YellowgradientButton.dart';
 import 'package:workout_app/pages/LoginPage.dart';
 
@@ -9,50 +10,40 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: Colors.black,
       body: Stack(
         children: [
-          Container(
-            width: double.infinity,
-            height: double.infinity,
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topRight,
-                end: Alignment.bottomLeft,
-                colors: [
-                  Color.fromARGB(255, 89, 86, 86),
-                  Color.fromARGB(255, 24, 24, 24),
+          Scaffoldbackground(),
+          SingleChildScrollView(
+            child: Center(
+              child: Column(
+                children: [
+                  const SizedBox(height: 150,),
+                  SvgPicture.asset('assets/icons/logo.svg', width: screenWidth*0.25),
+                  SizedBox(height: 2),
+                  Text(
+                    'Helios Sports Tech',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: screenWidth * 0.07,
+                      color: Colors.white,
+                    ),
+                  ),
+                  Text(
+                    'Here To Compete.',
+                    style: TextStyle(fontSize: screenWidth * 0.04, color: Color(0xFFC0C0C0)),
+                  ),
+                  SizedBox(height: 400,),
+                  GradientButton(
+                    text: 'Get started', 
+                    onPressed: (){
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Loginpage()));
+                    }),
+                  const SizedBox(height: 25),
                 ],
               ),
-            ),
-          ),
-          Center(
-            child: Column(
-              children: [
-                const Spacer(flex: 2,),
-                SvgPicture.asset('assets/icons/logo.svg', width: screenWidth*0.25),
-                SizedBox(height: 2),
-                Text(
-                  'Helios Sports Tech',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: screenWidth * 0.085,
-                    color: Colors.white,
-                  ),
-                ),
-                Text(
-                  'Here To Compete.',
-                  style: TextStyle(fontSize: screenWidth * 0.052, color: Color(0xFFC0C0C0)),
-                ),
-                const Spacer(flex: 5),
-                GradientButton(
-                  text: 'Get started', 
-                  onPressed: (){
-                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Loginpage()));
-                  }),
-                const SizedBox(height: 20),
-              ],
             ),
           ),
         ],
