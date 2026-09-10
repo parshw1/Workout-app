@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:workout_app/pages/home.dart';
 import 'package:workout_app/pages/Goals.dart';
 import 'package:workout_app/pages/Workout.dart';
 import 'package:workout_app/pages/Calender.dart';
 import 'package:workout_app/pages/profile.dart';
-import 'package:workout_app/widgets/ScaffoldBackground.dart';
-import 'package:workout_app/widgets/banner.dart';
-import 'package:workout_app/widgets/headingText.dart';
 
 
 class Navigation extends StatefulWidget {
@@ -21,7 +17,6 @@ class Navigation extends StatefulWidget {
 class _NavigationState extends State<Navigation> {
   int _currentIndex = 0;
   final List<Widget> _pages = [
-      // Add your pages here
       Home(),
       Goalspage(),
       Workout(),

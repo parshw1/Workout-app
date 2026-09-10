@@ -1,8 +1,15 @@
 [
     {
-        "id": 1,
         "title": "Your Next Workout",
         "heading": "Push Ups",
+        "Duration": "30 Minutes",
+        "reps": "115",
+        "sets": "15",
+        "exercise": "5"
+    },
+    {
+        "title": "Your Last Workout",
+        "heading": "Pull Ups",
         "Duration": "30 Minutes",
         "reps": "115",
         "sets": "15",

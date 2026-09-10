@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:workout_app/pages/navigation.dart';
 import 'package:workout_app/widgets/ScaffoldBackground.dart';
-import 'package:workout_app/widgets/YellowgradientButton.dart';
+import 'package:workout_app/widgets/gradientButton.dart';
 import 'package:workout_app/pages/LoginPage.dart';
 import 'package:workout_app/widgets/headingText.dart';
 
