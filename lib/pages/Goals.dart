@@ -17,27 +17,34 @@ class Goalspage extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: Scaffoldbackground(
-        widget: SingleChildScrollView(
-          child: Center(
-            child: Container(
-              child: Column(
-                children: [
-                  SizedBox(height: 100),
-
-                  Row(
-                    children: [
-                      Text('Overall progress', style: TextStyle()),
-                      SizedBox(height: 10),
-                      LinearProgressIndicator(value: 0.7),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ),
+      body: Container(
+      
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topRight,
+          end: Alignment.bottomLeft,
+          colors: [
+            Color.fromARGB(255, 65, 60, 60),
+            Color.fromARGB(255, 0, 0, 0),
+          ],
         ),
       ),
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(height: 100),
+            Row(
+              children: [
+                Text('Overall progress', style: TextStyle()),
+                SizedBox(height: 10),
+                LinearProgressIndicator(value: 0.7),
+              ],
+            ),
+          ],
+        ),
+      ),
+    )
+      
     );
   }
 }
