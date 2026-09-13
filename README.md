@@ -1,6 +1,6 @@
 # workout_app
 
-A new Flutter project.
+Recreating Workout app UI
 
 ## Getting Started
 

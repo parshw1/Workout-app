@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:workout_app/pages/navigation.dart';
 import 'package:workout_app/widgets/ScaffoldBackground.dart';
 import 'package:workout_app/widgets/gradientButton.dart';
 import 'package:workout_app/pages/LoginPage.dart';
@@ -16,27 +15,32 @@ class SplashScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.black,
       body: Scaffoldbackground(
-        widget: ListView(
-          padding: EdgeInsets.all(16),
-          children: [
-            SizedBox(height: 150),
-            Center(
-              child: Column(
-                children: [
-                  Image.asset('assets/images/logo.png', width: 123),
-                  Text(
-                    "Helios Sport Tech",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28, color: Colors.white),
-                  ),
-                  Text("Here To Compete.", style: TextStyle(fontSize: 16, color: Colors.white)),
-                ],
+        widget: SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.all(16),
+            child: Column(
+              children: [
+              SizedBox(height: 150),
+              Center(
+                child: Column(
+                  children: [
+                    Image.asset('assets/images/logo.png'),
+                    SizedBox(height: 15,),
+                    Text(
+                      "Helios Sport Tech",
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30, color: Colors.white),
+                    ),
+                    Text("Here To Compete.", style: TextStyle(fontSize: 16, color: Colors.white)),
+                  ],
+                ),
               ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
       bottomNavigationBar: Container(
-        margin: EdgeInsetsDirectional.all(20),
+        margin: EdgeInsetsDirectional.all(25),
         child: GradientButton(text: 'Get Started', onPressed: (){
           Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Loginpage()));
         }),

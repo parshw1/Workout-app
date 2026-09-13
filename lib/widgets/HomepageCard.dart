@@ -30,15 +30,14 @@ class _ListCardState extends State<ListCard> {
 }
   @override
   Widget build(BuildContext context) {
-    return Card(
-      color: Colors.white,
-      child: ListView.builder(
-        shrinkWrap: true,
-        physics: NeverScrollableScrollPhysics(),
-        itemCount: carddata.length,
-        itemBuilder: (context, index) {
-          final item = carddata[index];
-          return ListTile(
+    return ListView.builder(
+      shrinkWrap: true,
+      physics: NeverScrollableScrollPhysics(),
+      itemCount: carddata.length,
+      itemBuilder: (context, index) {
+        final item = carddata[index];
+        return Card(
+          child: ListTile(
             title: Text(item['title'], style: TextStyle(color: const Color.fromARGB(255, 0, 0, 0), fontSize: 16),),
             subtitle: Text(item['heading'], style: TextStyle(color: const Color.fromARGB(179, 0, 0, 0), fontSize: 14),),
             trailing: Column(
@@ -50,9 +49,9 @@ class _ListCardState extends State<ListCard> {
                 Text('${item['exercise']} cal', style: TextStyle(color: const Color.fromARGB(179, 0, 0, 0), fontSize: 14),),
               ],
             ),
-          );
-        },
-      ),
+          ),
+        );
+      },
     );
   }
 }
