@@ -24,7 +24,7 @@ class SplashScreen extends StatelessWidget {
               Center(
                 child: Column(
                   children: [
-                    Image.asset('assets/images/logo.png'),
+                    Hero(tag: 'logo', child: Image.asset('assets/images/logo.png')),
                     SizedBox(height: 15,),
                     Text(
                       "Helios Sport Tech",

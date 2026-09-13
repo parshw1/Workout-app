@@ -17,7 +17,7 @@ class Loginpage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         forceMaterialTransparency: true,
-        title: SvgPicture.asset('assets/icons/loginpagelogo.svg'),
+        title: Hero(tag: 'logo', child: Image.asset('assets/images/logo.png', width: 40,)),
         centerTitle: true,
       ),
       body: Scaffoldbackground(

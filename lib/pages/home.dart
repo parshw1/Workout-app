@@ -13,7 +13,8 @@ class Home extends StatelessWidget {
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        leading: Image(height: 0.1, width: 0.1, image: AssetImage('assets/images/logo.png')),
+        leadingWidth: 40,
+        leading: Hero(tag: 'logo', child: Image.asset('assets/images/logo.png',)),
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 8),
@@ -177,7 +178,7 @@ class Home extends StatelessWidget {
                 
                 SizedBox(height: 200, child: ListCard()),
                 
-                SizedBox(height: 350),
+                SizedBox(height: 170),
                 GradientButton(text: ' +  Create New Plan', onPressed: () {}),
                 SizedBox(height: 20,),
                 SizedBox(
